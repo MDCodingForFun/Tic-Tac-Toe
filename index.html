@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <div class="welcome">
+    <div class="content">
+        <h2>TIC TAC TOE</h2>
+        <p>Choose your weapon.</p>
+        <button class='btn btn-default weapon' id='X'>X</button>
+        <button class='btn btn-default weapon' id='O'>O</button>
+        <div class="turnMessage">Your turn first.</div>
+        <p>Level</p>
+        <button class="btn btn-default" id="easy">Easy</button>
+        <button class="btn btn-default" id="medium">Medium</button>
+        <button class="btn btn-default" id="hard">Hard</button>
+        <div class="start">
+          <button class="btn btn-default" id="startBtn">Let's Play</button>
+        </div>
+    </div>
+  </div>
+  <div class="wrapper">
+      <div class="mainBody">
+          <h1 class="header">TIC TAC TOE</h1>
+          <div class="players">
+            <div class="you">
+                <span><i class="fas fa-user"></i>You: </span> 
+                <span id="yourScore"></span>
+            </div>
+            <div class="versus"> Vs.</div>
+            <div class="AI">
+              <span><i class="fas fa-robot"></i>AI: </span>
+                <span id="aiScore"></span>
+            </div>
+          </div>
+          <div class="board">
+            <table>
+              <tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+              </tr>
+              <tr>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+              </tr>
+              <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+              </tr>
+            </table>
+          </div>
+             <div class="level">Level:<span id="levelName"> </span></div>
+              <div class="settingsIcon">
+                <button class="btn btn-primary" id="settings"><i class="fas fa-cog"></i></button>
+              </div> 
+       </div>
+       <footer>
+        <p>Designed and Coded with <i class="fas fa-heart"></i> by <a href="https://github.com/MayDeypalubos" target="_blank">May Deypalubos.</a></p>
+      </footer>
+</div>
+  <div class="endGame">
+    <div class="endGameText"></div>
+    <button class="btn playAgainBtn" onClick="startGame()">Play Again</button>
+  </div>
+ 
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

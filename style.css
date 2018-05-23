@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand|Caveat+Brush');
+
+:root{
+ --dark: #36384C;
+ --light: white;
+ --primary: #DF6E21;
+}
+body{
+  background:url('https://itsasmallweb.files.wordpress.com/2011/03/writers-block-wallpaper1.png')no-repeat center;
+  margin:5% 20%;
+  padding:0;
+  box-sizing: border-box;
+  font-size:16px;
+  font-family: 'Patrick Hand', cursive;
+}
+.btn{
+  font-size:1rem;
+  padding:.5rem;
+  border-radius:3px;
+  margin:.5rem;
+  cursor:pointer;
+  border:none;
+  font-family: 'Patrick Hand', cursive;
+  letter-spacing: 2px;
+  color:var(--dark);
+  background-color:var(--primary);
+}
+.weapon{
+  background-color:transparent;
+  border:none;
+  font-size:3rem;
+  color:var(--dark);
+}
+.start .btn{
+  width:8rem;
+}
+.btn:hover, .btn:focus{
+  outline:none;
+  color: var(--light);
+}
+.weapon:hover, .weapon:focus{
+  outline:none;
+  color:var(--primary);
+}
+.wrapper{
+  display:grid;
+  justify-items:center;
+  grid-template-columns: auto;
+  grid-auto-rows: 1fr auto;
+  grid-template-areas: 
+  "mainBody"
+  "footer";
+}
+.mainBody{
+  color:var(--dark);
+  border-radius:4px;
+  grid-area:mainBody;
+  padding-left:2rem;
+  padding-right:2rem;
+  justify-items:center;
+  display:grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto auto 1fr auto auto;
+  grid-template-areas: 
+  "header"
+  "players"
+  "board"
+  "level"
+  "settings";
+}
+.header{
+  grid-area:header;
+  letter-spacing:2px;
+  color:var(--primary);
+  font-family: 'Caveat Brush', cursive;
+}
+.players{
+ font-size:1rem;
+ grid-area:players;
+ display:grid;
+ justify-items: center;
+ align-items: center;
+ width:100%;
+ grid-auto-columns: 1fr 1fr 1fr;
+ grid-template-areas: 
+ "you versus AI";
+}
+.versus{
+  font-size:1.5rem;
+}
+.board{
+  grid-area:board;
+  justify-self:center;
+  margin-top:2rem;
+}
+.level{
+  margin-top:1rem;
+}
+.settingsIcon{
+  grid-area:settings;
+  display:grid;
+  justify-self:end;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  margin-right:-2rem;
+  cursor:pointer; 
+}
+.settingsIcon .btn{
+  background-color:transparent;
+  font-size:2rem;
+  color:var(--primary);
+}
+.settingsIcon .btn :hover{
+  color:var(--dark);
+}
+td{
+  border: 2px solid var(--dark);
+  height:6rem;
+  width:6rem;
+  text-align:center;
+  vertical-align:middle;
+  font-size:4rem;
+  cursor:pointer;
+}
+table{
+  grid-area: table;
+  border-collapse:collapse;
+}
+table tr:first-child td{
+  border-top:0;
+}
+table tr:last-child td{
+  border-bottom:0;
+}
+table tr td:first-child {
+  border-left:0;
+}
+table tr td:last-child {
+  border-right:0;
+}
+.endGame{
+  display:none;
+  width:200px;
+  top:120px;
+  background-color: rgba(0,0,0,0.7);
+  position:absolute;
+  left:50%;
+  margin-left:-100px;
+  margin-top:10%;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  text-align:center;
+  color:var(--light);
+  font-size:1.5rem;
+  border-radius:3px;
+}
+.playAgainBtn{
+  margin-top:1rem;
+}
+.welcome{
+  display:none;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:url('https://itsasmallweb.files.wordpress.com/2011/03/writers-block-wallpaper1.png')no-repeat center;
+}
+.content{
+  color:var(--dark);
+  margin:5% auto;
+  width:50%;
+  text-align:center;
+  padding:1rem;
+  font-size:1rem;
+  border-radius:4px;
+  font-size: 1.5rem;
+}
+.content h2{
+  font-size:2rem;
+  padding:0;
+  margin:0;
+  letter-spacing:2px;
+  color:var(--primary);
+  font-family: 'Caveat Brush', cursive;
+}
+.turnMessage{
+  display:none;
+  padding-top:.5rem;
+}
+.start{
+  margin-top:1rem;
+}
+footer{
+  grid-area:footer;
+  font-size:14px;
+  color:var(--dark);
+}
+footer a{
+  text-decoration:none;
+  color:var(--primary);
+}
+@media screen and (max-width:414px) and (min-width:300px){
+  body{
+  margin:5% 10%;
+}
+.content{
+  margin:5% auto;
+  width:80%;
+}
+.welcome{
+  overflow:auto;
+}
+}
